@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 30, 2023 at 08:24 AM
+-- Generation Time: Dec 30, 2023 at 08:41 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -55,6 +55,14 @@ CREATE TABLE `daftar_poli` (
   `no_antrian` int UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `daftar_poli`
+--
+
+INSERT INTO `daftar_poli` (`id`, `id_pasien`, `id_jadwal`, `keluhan`, `no_antrian`) VALUES
+(3, 10, 1, 'Demam', 1),
+(4, 10, 1, 'Demam', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -86,7 +94,7 @@ CREATE TABLE `dokter` (
 --
 
 INSERT INTO `dokter` (`id`, `nama`, `alamat`, `no_hp`, `id_poli`) VALUES
-(11, 'Dewi', 'Semarang', '0489921018', 1);
+(11, 'Faiz', 'Semarang', '0489921018', 1);
 
 -- --------------------------------------------------------
 
@@ -127,7 +135,7 @@ CREATE TABLE `obat` (
 --
 
 INSERT INTO `obat` (`id`, `nama_obat`, `kemasan`, `harga`) VALUES
-(1, 'Contoh Obat 2', 'Metanol 2', 250000);
+(1, 'Metanol', 'Tablet', 30000);
 
 -- --------------------------------------------------------
 
@@ -149,8 +157,8 @@ CREATE TABLE `pasien` (
 --
 
 INSERT INTO `pasien` (`id`, `nama`, `alamat`, `no_ktp`, `no_hp`, `no_rm`) VALUES
-(6, 'Lestari', 'Semarang', '1234567890001', '085876543210', '082456'),
-(9, 'Dhamar Bagus', 'Demak', '1234567890003', '098765432123', '875818');
+(6, 'Aulia', 'Semarang', '1234567890003', '081234567890', '1'),
+(10, 'Rachman', 'Semarang', '1234567890003', '081123456789', '440294');
 
 -- --------------------------------------------------------
 
@@ -264,7 +272,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `daftar_poli`
 --
 ALTER TABLE `daftar_poli`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `detail_periksa`
@@ -294,7 +302,7 @@ ALTER TABLE `obat`
 -- AUTO_INCREMENT for table `pasien`
 --
 ALTER TABLE `pasien`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `periksa`

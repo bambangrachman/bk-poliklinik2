@@ -27,7 +27,7 @@
             <p class="login-box-msg">Sign in</p>
             <form action="" method="POST">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Username | Case Sensitive" name="nama" value="Dewi">
+                    <input type="text" class="form-control" placeholder="Username | Case Sensitive" name="nama" value="Faiz">
                     <div class="input-group-append">
                         <div class="input-group-text">
                             <span class="fas fa-envelope"></span>
